@@ -11,11 +11,6 @@ namespace Game.UI
         [SerializeField]
         private Point _point;
 
-        private void Awake()
-        {
-            _point.LoadTiles();
-        }
-
         public void OpenPanel()
         {
             _optionText.text = _point.GetTileName();

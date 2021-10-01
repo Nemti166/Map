@@ -5,7 +5,7 @@ using Game.Helper;
 
 namespace Game.GameCamera
 {
-    public class OutOfBorders : MonoBehaviour
+    public class CameraOutOfBorders : MonoBehaviour
     {
         private Camera _camera;
 
@@ -22,13 +22,14 @@ namespace Game.GameCamera
         private void StayInGameArea()
         {
             var camHalfHeight = _camera.orthographicSize;
-            var camHalfWidth = camHalfHeight * _camera.aspect;
+            var camHalfWidth = _camera.orthographicSize * _camera.aspect;
 
-            var topBorder = Borders.GameBorders.Top - camHalfHeight;
-            var bottomBorder = Borders.GameBorders.Bottom + camHalfHeight;            
 
-            var leftBorder = Borders.GameBorders.Left + camHalfWidth;
-            var rightBorder = Borders.GameBorders.Right - camHalfWidth;
+            var topBorder = Borders.instance.GameBorders.Top - camHalfHeight;
+            var bottomBorder = Borders.instance.GameBorders.Bottom + camHalfHeight;
+
+            var leftBorder = Borders.instance.GameBorders.Left + camHalfWidth;
+            var rightBorder = Borders.instance.GameBorders.Right - camHalfWidth;
 
             transform.position = new Vector2(
                 Mathf.Clamp(transform.position.x, leftBorder, rightBorder),

@@ -1,8 +1,10 @@
 {
 	"List": [
 		{
-			"Id": "au19_bg_0_0_d",
+			"Id": "au19_bg_1_4_d",
 			"Type": "Texture",
+			"X": 20.48,
+			"Y": -5.12,
 			"Width": 5.12,
 			"Height": 5.12
 		},
@@ -87,10 +89,8 @@
 			"Height": 5.12
 		},
 		{
-			"Id": "au19_bg_1_4_d",
+			"Id": "au19_bg_0_0_d",
 			"Type": "Texture",
-			"X": 20.48,
-			"Y": -5.12,
 			"Width": 5.12,
 			"Height": 5.12
 		},
